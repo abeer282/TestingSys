@@ -1,0 +1,14 @@
+C:\TestingSys\TestingSysApi\bin\Debug\netcoreapp2.1\TestingSysApi.deps.json
+C:\TestingSys\TestingSysApi\bin\Debug\netcoreapp2.1\TestingSysApi.runtimeconfig.json
+C:\TestingSys\TestingSysApi\bin\Debug\netcoreapp2.1\TestingSysApi.runtimeconfig.dev.json
+C:\TestingSys\TestingSysApi\bin\Debug\netcoreapp2.1\TestingSysApi.dll
+C:\TestingSys\TestingSysApi\bin\Debug\netcoreapp2.1\TestingSysApi.pdb
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.csprojAssemblyReference.cache
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.csproj.CoreCompileInputs.cache
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.RazorAssemblyInfo.cache
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.RazorAssemblyInfo.cs
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.AssemblyInfoInputs.cache
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.AssemblyInfo.cs
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.RazorTargetAssemblyInfo.cache
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.dll
+C:\TestingSys\TestingSysApi\obj\Debug\netcoreapp2.1\TestingSysApi.pdb
