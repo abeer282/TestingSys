@@ -27,6 +27,7 @@ namespace TestingSysApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<QuestionContext>();
+            services.AddDbContext<TestContext>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
