@@ -28,6 +28,7 @@ namespace TestingSysApi
         {
             services.AddDbContext<QuestionContext>();
             services.AddDbContext<TestContext>();
+            services.AddCors(c => c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin())); //allow cors
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -45,6 +46,7 @@ namespace TestingSysApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors(options => options.AllowAnyOrigin()); //added to allow cors
         }
     }
 }
