@@ -8,10 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TestingSysApi.Contexts;
 using TestingSysApi.Models;
-
 namespace TestingSysApi.Controllers
 {
-    [EnableCors("AllowOrigin")]
+    [EnableCors("AllowAny_Origin_Method_Header")]
     [Route("api/[controller]")]
     [ApiController]
     public class QuestionsController : ControllerBase
