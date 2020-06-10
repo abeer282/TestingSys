@@ -20,7 +20,7 @@ namespace TestingSysApi.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Test>().HasData(
-                new Test { Id = 1, number_of_questions = 3, questions = "1#2#3#", has_time = true, time_in_seconds = 600 , can_review = false , time_of_review = 0 , is_choice_random = true , can_move_back = true , pass_questions_number =2 , answers = "" }
+                new Test { Id = 5, number_of_questions = 3, questions = "1#2#3#", has_time = true, time_in_seconds = 600, can_review = false, time_of_review = 0, is_choice_random = true, can_move_back = true, pass_questions_number = 2, answers = "" }
             );
         }
     }
