@@ -28,6 +28,7 @@ namespace TestingSysApi
         {
             services.AddDbContext<QuestionContext>();
             services.AddDbContext<TestContext>();
+            services.AddDbContext<WorkerContext>();
             // Add CORS:
             services.AddCors(o => o.AddPolicy("AllowAny_Origin_Method_Header", builder =>
             {
