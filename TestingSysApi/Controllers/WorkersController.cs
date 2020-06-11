@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TestingSysApi.Contexts;
 using TestingSysApi.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace TestingSysApi.Controllers
 {
+    [EnableCors("AllowAny_Origin_Method_Header")]
     [Route("api/[controller]")]
     [ApiController]
     public class WorkersController : ControllerBase
