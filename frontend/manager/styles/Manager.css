@@ -1,14 +1,23 @@
-﻿html, body {
+﻿
+html, body {
     height: 100%;
 }
 
+div#test {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #23728c;
+    padding: 10px 50px 30px 30px;
+    border: 2px solid #cbcbcb;
+}
 body {
     margin: 0px;
     padding: 0px;
     color: white;
     font-size: 20px;
     font-family: Arial;
-    background-color: #EAEAaa;
+    /*background-color: #EAEAaa;*/
 }
 
 div {

@@ -1,35 +1,42 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="Manager.css" />
+    <link rel="stylesheet" type="text/css" href="styles/Manager.css" />
+
     <title>General exams </title>
 </head>
-
-<body >
-    <img src="q.jpg" alt="Trulli" width="80" height="50">
-    <h2> General exams </h2>
-    <hr>
-    <script>
-        function gotoPage(s) {
-        location.href = s;
+<body>
+    <style>
+        body {
+            background-image: url('images/7.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
-    </script>
+    </style>
+
+    <div id="test">
+        <img src="images/q.jpg" alt="Trulli" width="80" height="50">
+        <h2> General exams </h2>
+        <hr>
+        <script>
+            function gotoPage(s) {
+                location.href = s;
+            }
+        </script>
         <div class="menuSection">
-            <a href="http://www.ynet.co.il" target="_blank"><div class="menuItem">List of questions</div></a>
-            <div class="menuItem" onclick="gotoPage('about.html')">Building a new exam</div>
-            <div class="menuItem">List of labels workers</div>
-           
+            <a href="index.html" target="_blank"><div class="menuItem">List of questions</div></a>
+            <a href="index.html" target="_blank"><div class="menuItem">Building a new exam</div></a>
+            <a href="index.html" target="_blank"><div class="menuItem">List of workers</div></a>
+            <a href="index.html" target="_blank"><div class="menuItem"> List of workers test results</div></a>
         </div>
         <hr>
-        <p><a href="index.html"> Exit</a></p>
+
+        <p dir="rtl"> <a href="index.html"> Exit</a></p>
+    </div>
 
 
 
-
-
-
-
-    </body>
+    <body\>
 </html>
