@@ -48,7 +48,7 @@ namespace TestingSysApi.Controllers
 
             return Ok(test);
         }
-
+        
         // PUT: api/Tests/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTest([FromRoute] long id, [FromBody] Test test)
