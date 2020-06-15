@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>LOGIN</title>
+<script src="scripts/question.js"></script>
+<!-- <script src="scripts/login.js"></script> -->
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/login.css">
+</head>
+<body>
+<div id="QuizContainer" class="container">
+    <div class="welcome">עובד/ת יקר/ה,</div>
+	<div class="enterid">הכנס/י מספר ת.ז. כדי להתחיל את המבחן:</div>
+	<label class="idlabel">מספר ת.ז.</label>
+  <input type="text" id="idinput" onfocusout="setWorkerId();"><br><br>
+	<button id="nextButton" class="next-btn"  onclick="location.href = 'quiz.html';" >למבחן</button>
+    
+</div>
+<div id="result" class="container result" style="display: none; ">
+</div>
+</body>
+</html>
