@@ -3,22 +3,22 @@
 
 <head>
 <title>Test</title>
-<script src="scripts/question.js"></script>
+<script src="scripts/QUIZ.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="styles/quiz.css">
 </head>
-<body onload="getTest();">
-<div id="QuizContainer" class="container">
-    <div class="title">Test</div>
+<body onload="getTest()">
+<div id="QuizContainer" class="container" style="display:block;">
+    <div class="title">מבחן</div>
     <div id="question" class ="question "></div>
     <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
     <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
     <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
     <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
-    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next</button>
+    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">הבא</button>
     
 </div>
-<div id="result" class="container result" style="display: none; ">
+<div id="result" class="container result" style="display:none;">
 </div>
 </body>
 </html>
