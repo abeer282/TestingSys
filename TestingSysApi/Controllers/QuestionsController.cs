@@ -48,6 +48,66 @@ namespace TestingSysApi.Controllers
             return Ok(question);
         }
 
+        // GET: api/Questions/exam/5
+        [HttpGet("exam/{id}")]
+        public async Task<IActionResult> GetExamQuestion([FromRoute] string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var question = await _context.Question.FindAsync(long.Parse(id));
+            if (question == null)
+            {
+                return NotFound();
+            }
+            return Ok(new { Id=question.Id, question = question.question, answer1 = question.answer1, answer2 = question.answer2, answer3 = question.answer3, answer4 = question.answer4});
+        }
+
+
+
+
+
+        // GET: api/Questions/score/5
+        [HttpGet("score/{data}")]
+        public async Task<IActionResult> GetExamResult([FromRoute] string data)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            //q-q-q-aaa
+            List<String> qlist = new List<string>(data.Split("-", StringSplitOptions.RemoveEmptyEntries));
+            String answers = qlist[qlist.Count-1];
+            int pass = int.Parse(qlist[0]);
+            qlist.RemoveAt(qlist.Count - 1);
+            qlist.RemoveAt(0);
+            int current = 0, score = 0;
+            foreach (String id in qlist)
+            {
+                var question = await _context.Question.FindAsync(long.Parse(id));
+                if (question.Id == Int32.Parse(char.ToString(answers[current])))
+                {
+                    score++;
+                }
+                current++;
+            }
+            if (qlist == null)
+            {
+                return NotFound();
+            }
+            return Ok(new {score=score, result = (pass <= score) ? true : false });
+        }
+
+
+
+
+
+
+
+
+
+
         // PUT: api/Questions/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutQuestion([FromRoute] long id, [FromBody] Question question)
