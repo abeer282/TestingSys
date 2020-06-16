@@ -4,25 +4,23 @@
 <head>
 <title> Add Quiz</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="Quiz.css">
+<link rel="stylesheet" type="text/css" href="styles/AddQuestion.css">
+
 </head>
 <body>
     <div class="form-style-8">
         <h2>Adding a new Question </h2>
         <form>
-          <input type="text" name="field1" placeholder="Question" />
-          <input type="text" name="field2" placeholder="Option1" />
-          <input type="text" name="field3" placeholder="Option2" />
-          <input type="text" name="field4" placeholder="Option3" />
-          <input type="text" name="field5" placeholder="Option4" />
-          <input type="text" name="field6" placeholder="Correct Answer" />
+          <input type="text" name="field1"  id="field1" placeholder="Question" />
+          <input type="text" name="field2" id="field2" placeholder="Option1" />
+          <input type="text" name="field3" id="field3" placeholder="Option2" />
+          <input type="text" name="field4" id="field4" placeholder="Option3" />
+          <input type="text" name="field5" id="field5" placeholder="Option4" />
+          <input type="text" name="field6" id="field6" placeholder="Correct Answer" />
           
-          <input type="button" value="Add" />
+          <input type="button" value="Add" onclick="AddQuestion();" />
         </form>
       </div>
-    
-
-
-<script src="QUIZ.js"></script>
+<script src="scripts/AddQuestion.js"></script>
 </body>
 </html>
