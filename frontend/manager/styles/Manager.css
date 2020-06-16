@@ -1,9 +1,11 @@
 ﻿
 html, body {
     height: 100%;
+	
 }
 
 div#test {
+	direction:rtl;
     width: 700px;
     height: 700px;
     margin: 0 auto;
@@ -17,6 +19,7 @@ body {
     color: white;
     font-size: 20px;
     font-family: Arial;
+	direction:rtl;
     /*background-color: #EAEAaa;*/
 }
 
@@ -48,4 +51,21 @@ div {
 
 a {
     color: white
+}
+
+.exitWin{
+    border:none;
+    outline:none;
+    background: rgba(255, 255 , 255, 0.5);
+    width:100px;
+    height:35px;
+    border-radius: 20px;
+    cursor: pointer;
+    float:left;
+	text-align:center;
+	vertical-align: middle;
+}
+.exitWin:hover{
+    background: #08038c;
+    color:#f6f6f6;
 }
