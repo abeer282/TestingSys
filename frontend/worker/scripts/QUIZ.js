@@ -8,12 +8,7 @@ var answers = [];
 var score;
 var numOfPass;
 
-//var container=document.getElementById('quizContainer');
-var questionEl=document.getElementById('question');
-var opt1 = document.getElementById('opt1');
-var opt2 = document.getElementById('opt2');
-var opt3 = document.getElementById('opt3');
-var opt4 = document.getElementById('opt4');
+
 
 var nextButton=document.getElementById('nextButton');
 var prevButton=document.getElementById('prevButton');
@@ -78,35 +73,12 @@ function loadNextQuestion(){
     }
     if(currentQuestion==questionsnums.length){
 		getScore();
-		//window.close('','_parent','');
-		//var numOfPassObj = { numOfP : numOfPass};
-		//var answersObj = { answersArr : answers};
-		//sessionStorage.setItem("numOfPass", JSON.stringify(numOfPassObj));
-		//sessionStorage.setItem("answers", JSON.stringify(answers));
-		//sessionStorage.setItem("questions", JSON.stringify(questions));
-		//window.location.href = "score.html";
-		//location.replace("score.html");
-        //document.getElementById('quizContainer').style.display= "none";
-        //document.getElementById('result').style.display="block";
-        //document.getElementById('result').innerHTML='עברת את המבחן ' + score;
-        return;
+		return;
     }
     loadQuestion(currentQuestion);
 };  
 
 
-function setScore(){
-	//numOfPass=sessionStorage.getItem("numOfPass");
-	//answers=sessionStorage.getItem("answers");
-	//questions=sessionStorage.getItem("questions");
-	//console.log('numOfPass\n'+numOfPass);
-	//console.log('answers\n'+answers);
-	//console.log('questions\n'+questions);
-	//answers
-	//getScore();
-	//document.getElementById('score').innerHTML='עברת את המבחן ';
-	//console.log('aaaaaaaaaaaaaaaaaaa');
-}
 
 function getScore(){
 	var q='',a='',i;
@@ -121,14 +93,20 @@ function getScore(){
 		score=Boolean(res.result);
 		
 		if (score){
+			
 			alert("יווהווו, עברת את המבחן!!");
 			
 		}else{
 			alert("הארד לאק, לא עברת!!");
 			
 		}
+		setUserResult();
     }).catch(function(error) { 
 		console.error('Unable to get score.', error);
 	});
 }
 
+function setUserResult(){
+	localStorage.setItem("score", score);
+	window.location.replace("score.html");
+}
