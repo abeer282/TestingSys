@@ -21,7 +21,25 @@ function setResult(){
 	}else{
 		document.getElementById('score').innerHTML='Hard luck!! you failed :/';//when hebrew gets strange letters
 	}
-	//sendResult();
+	sendResult();
 }
 
+function sendResult(){
+	
+	var myHeaders = new Headers();
+	myHeaders.append("Content-Type", "application/json");
 
+	var raw = JSON.stringify({"id":workerId,"fname":fname,"lname":lname,"email":email,"did_test":true,"pass_test":result});
+
+	var requestOptions = {
+	  method: 'PUT',
+	  headers: myHeaders,
+	  body: raw,
+	  redirect: 'follow'
+	};
+
+	fetch(workersUrl+'/'+workerId, requestOptions)
+	  .then(response => response.text())
+	  .then(res => console.log(res))
+	  .catch(error => console.log('Unable to set result!', error));
+}
